@@ -752,7 +752,6 @@
 
 })(jQuery);
 
-<<<<<<< HEAD
 fetch('https://api.goprogram.ai/inspiration')
     .then(res => res.json()) // parse response as JSON
     .then(data => {
@@ -786,10 +785,3 @@ fetch('https://uselessfacts.jsph.pl/random.json')
     .catch(err => {
         console.log(`error ${err}`)
 });
-=======
-/*
-	Ethereal by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
->>>>>>> 0540784ad223ccd2ca41c290929e413bad063e6d
