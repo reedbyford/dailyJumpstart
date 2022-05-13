@@ -1,36 +1,3 @@
-fetch('https://api.goprogram.ai/inspiration')
-    .then(res => res.json()) // parse response as JSON
-    .then(data => {
-      console.log(data)
-      document.querySelector('p.inspirationQuote').innerText = data.quote
-      document.querySelector('span.quoteAuthor').innerText = data.author
-
-    })
-    .catch(err => {
-        console.log(`error ${err}`)
-});
-
-fetch('https://api.nytimes.com/svc/topstories/v2/us.json?api-key=GepHV676UHc4VvNrCJkB7OAxyGwXM740')
-    .then(res => res.json()) // parse response as JSON
-    .then(data => {
-      console.log(data)
-      document.querySelector('p.newsHeadline').innerText = data.results[0].title
-      document.querySelector('img.newsPic').src = data.results[0].multimedia[0].url
-    })
-    .catch(err => {
-        console.log(`error ${err}`)
-});
-
-fetch('https://uselessfacts.jsph.pl/random.json')
-    .then(res => res.json()) // parse response as JSON
-    .then(data => {
-      console.log(data)
-      document.querySelector('p.funFact').innerText = data.text
-    })
-    .catch(err => {
-        console.log(`error ${err}`)
-});
-
 (function($) {
 
 	// Settings.
@@ -784,3 +751,37 @@ fetch('https://uselessfacts.jsph.pl/random.json')
 					});
 
 })(jQuery);
+
+fetch('https://api.goprogram.ai/inspiration')
+    .then(res => res.json()) // parse response as JSON
+    .then(data => {
+      console.log(data)
+      document.querySelector('p.inspirationQuote').innerText = data.quote
+      document.querySelector('span.quoteAuthor').innerText = data.author
+
+    })
+    .catch(err => {
+        console.log(`error ${err}`)
+});
+
+fetch('https://api.nytimes.com/svc/topstories/v2/us.json?api-key=GepHV676UHc4VvNrCJkB7OAxyGwXM740')
+    .then(res => res.json()) // parse response as JSON
+    .then(data => {
+      console.log(data)
+      document.querySelector('p.newsHeadline').innerText = data.results[0].title
+      document.querySelector('img.newsPic').src = data.results[0].multimedia[0].url
+	  document.querySelector('a.href').innerHTML = data.results[0].url
+    })
+    .catch(err => {
+        console.log(`error ${err}`)
+});
+
+fetch('https://uselessfacts.jsph.pl/random.json')
+    .then(res => res.json()) // parse response as JSON
+    .then(data => {
+      console.log(data)
+      document.querySelector('p.funFact').innerText = data.text
+    })
+    .catch(err => {
+        console.log(`error ${err}`)
+});
