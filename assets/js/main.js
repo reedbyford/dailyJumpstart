@@ -770,7 +770,7 @@ fetch('https://api.nytimes.com/svc/topstories/v2/us.json?api-key=GepHV676UHc4VvN
       console.log(data)
       document.querySelector('p.newsHeadline').innerText = data.results[0].title
       document.querySelector('img.newsPic').src = data.results[0].multimedia[0].url
-	  document.querySelector('a.href').innerHTML = data.results[0].url
+	  document.querySelector('a').href = data.results[0].url
     })
     .catch(err => {
         console.log(`error ${err}`)
