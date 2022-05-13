@@ -5,7 +5,7 @@ This is a web app I created utilizing 3 separate API's to gather information in 
 
 **Link to project:** dailyjumpstart.netlify.app
 
-<img src="dailyjumpstartscreenshot.png"
+<img src="dailyjumpstartscreenshot.png">
 
 ## How It's Made:
 
